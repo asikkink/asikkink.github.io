@@ -28,8 +28,21 @@
 		color:#999999;
 	}
 
-	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	article, aside, details,  footer, header, hgroup, menu, nav, section {
 		display: block;
+	}
+	
+	figure{
+width:100%;
+		padding-right:10px;
+		margin-bottom:45px;
+		 display: flex;
+		align-items: center;
+	}
+	figcaption{
+		font-size: 80%;
+		display: block;
+
 	}
 
 	body {
@@ -2216,6 +2229,9 @@
 			}
 
 			#main > section.four {
+				background-color: #ffffff !important;
+			}
+			#main > section.five {
 				background-color: #e8edec;
 			}
 
