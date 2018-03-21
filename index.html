@@ -11,10 +11,97 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/jquery-ui/jquery-ui.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--  <script src="assets/jquery-ui/external/jquery/jquery.js"></script>
+		    <script src="assets/jquery-ui/jquery-ui.js"></script> -->
+			  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script>
+		 $(document).ready(function(){
+			$( "#dialog" ).dialog({
+			  autoOpen: false,
+			  show: {
+				effect: "fade",
+				duration: 500
+				 
+			  },
+			  hide: {
+				effect: "puff",
+				duration: 500
+			  },
+			  minWidth: 600,
+			  modal: true
+			});
+			
+			$("body").on("click",".ui-widget-overlay",function() {
+				$('#dialog').dialog( "close" );
+			});
+		
+		});
+ 
+ 
+ function open_dialog(info){
+    
+		switch(info){
+			case "renewal": 
+				$('#dialog').dialog('option', 'title', 'Renewal Application');
+				$("#dialog_info").html("<p>RENEWAL INFO!</p>");
+				break;
+			case "galaxies": 
+				$('#dialog').dialog('option', 'title', 'Local Galaxies Visualization');
+				$("#dialog_info").html("<p>GALAXIES INFO!</p>");
+				break;
+			case "uh_courses": 
+				$('#dialog').dialog('option', 'title', 'UH Course Search');
+				$("#dialog_info").html("<p>UH COURSES INFO!</p>");
+				break;
+				case "tma": 
+				$('#dialog').dialog('option', 'title', 'TMA Interface');
+				$("#dialog_info").html("<p>TMA INFO!</p>");
+				break;
+			case "skysearch": 
+				$('#dialog').dialog('option', 'title', 'SkySearch');
+				$("#dialog_info").html("<p>SkySearch INFO!</p>");
+				break;
+			case "kilohoku": 
+				$('#dialog').dialog('option', 'title', 'Kilo Hoku');
+				$("#dialog_info").html("<p>Kilo Hoku INFO!</p>");
+				break;
+			case "mauivr": 
+				$('#dialog').dialog('option', 'title', 'Maui Snares the Sun VR');
+				$("#dialog_info").html("<p>Maui VR INFO!</p>");
+				break;
+			case "debug": 
+				$('#dialog').dialog('option', 'title', 'DebuggerPlusPlus');
+				$("#dialog_info").html("<p>DebuggerPlusPlus INFO!</p>");
+				break;
+			case "ufs": 
+				$('#dialog').dialog('option', 'title', 'Unidentified Flying Squirrel');
+				$("#dialog_info").html("<p>UFS INFO!</p>");
+				break;
+			case "aoa": 
+				$('#dialog').dialog('option', 'title', 'Attack On Algae');
+				$("#dialog_info").html("<p>Attack On Algae INFO!</p>");
+				break;
+			case "tse": 
+				$('#dialog').dialog('option', 'title', 'Twitch Sacrifices Everyone');
+				$("#dialog_info").html("<p>Twitch Sacrifices Everyone INFO!</p>");
+				break;
+			default: break;
+		
+		}
+	
+      $( "#dialog" ).dialog( "open" );
+    }
+
+		</script>
 	</head>
 	<body>
+	<div id="dialog" title="Dialog">
+  <div id="dialog_info"><p>This is an animated dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p></div>
+</div>
 
 		<!-- Header -->
 			<div id="header">
@@ -98,15 +185,15 @@
 <h3 style="float:left;width:40%;text-align:left">Web Development Projects</h3><hr style="float:left;width:60%;border-color:#666;margin-top:30px;">
 							<div class="row" style="padding-bottom:45px">
 								<div class="4u 12u$(mobile)">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic10.jpg" alt="" /></a>
+									<article class="item" onclick="open_dialog('renewal');">
+										<div class="image fit"><img src="images/pic10.jpg" alt="" /></div>
 										<header>
 											<h3>Renewal Application<br><small >Application to assign residents to desired rooms for the following school year</small></h3>
 										</header>
 									</article>
 									
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic09.jpg" alt="" /></a>
+									<article class="item" onclick="open_dialog('tma');">
+										<div class="image fit"><img src="images/pic09.jpg" alt="" /></div>
 										<header>
 											<h3>TMA System Interface<br><small >A cleaner interface to submit and view service requests </small></h3>
 										</header>
@@ -117,16 +204,16 @@
 								<div class="4u 12u$(mobile)">
 									
 											
-										<article class="item">
-										<a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
+										<article class="item"  onclick="open_dialog('galaxies');">
+										<div class="image fit"><img src="images/pic05.jpg" alt="" /></div>
 										<header>
 											<h3>Galaxies Visualization in Three.js<br><small >Visualizer for Brent Tully's Local Galaxies Data</small></h3>
 											
 										</header>
 									</article>
 									
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
+									<article class="item"  onclick="open_dialog('uh_courses');">
+										<div class="image fit"><img src="images/pic06.jpg" alt="" /></div>
 										<header>
 											<h3>UH Course Search<br><small >Run filtered searches on the UHM course offerings </small></h3>
 										</header>
@@ -136,8 +223,8 @@
 								</div>
 								<div class="4u$ 12u$(mobile)">
 									
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic01.jpg" alt="" /></a>
+									<article class="item"  onclick="open_dialog('skysearch');">
+										<div class="image fit"><img src="images/pic01.jpg" alt="" /></div>
 										<header>
 											<h3>SkySearch<br><small >App to search astronomy targets for observation information</small></h3>
 										</header>
@@ -150,8 +237,8 @@
 							<h3 style="float:left;width:35%;text-align:left">Virtual Reality Projects</h3><hr style="float:left;width:65%;border-color:#666;margin-top:30px;">
 							<div class="row" style="padding-bottom:45px">
 								<div class="4u 12u$(mobile)">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
+									<article class="item"  onclick="open_dialog('kilohoku');">
+										<div class="image fit"><img src="images/pic02.jpg" alt="" /></div>
 										<header>
 											<h3>Kilo Hoku<br><small >Virtual Reality simulation of Traditional Wayfinding on Polynesian Voyaging Canoes</small></h3>
 										</header>
@@ -161,8 +248,8 @@
 								</div>
 								<div class="4u 12u$(mobile)">
 									
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
+									<article class="item"  onclick="open_dialog('mauivr');">
+										<div class="image fit"><img src="images/pic03.jpg" alt="" /></div>
 										<header>
 											<h3>Maui Snares The Sun VR<br><small >UROP project, experimented with interactive storytelling in VR</small></h3>
 										</header>
@@ -171,8 +258,8 @@
 								</div>
 								<div class="4u$ 12u$(mobile)">
 									
-								<article class="item">
-										<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
+								<article class="item"  onclick="open_dialog('debug');">
+										<div class="image fit"><img src="images/pic07.jpg" alt="" /></div>
 										<header>
 											<h3>DebuggerPlusPlus<br><small >Squash all the bugs! Created with ACM Manoa's VR team</small></h3>
 										</header>
@@ -184,8 +271,8 @@
 							<h3 style="float:left;width:45%;text-align:left">Game Development Projects</h3><hr style="float:left;width:55%;border-color:#666;margin-top:30px;">
 							<div class="row">
 								<div class="4u 12u$(mobile)">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
+									<article class="item"  onclick="open_dialog('ufs');">
+										<div class="image fit"><img src="images/pic04.jpg" alt="" /></div>
 										<header>
 											<h3>Unidentified Flying Squirrel<br><small >Save your friends! A causal platformer video game</small></h3>
 										</header>
@@ -197,8 +284,8 @@
 								<div class="4u 12u$(mobile)">
 									
 									
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic11.jpg" alt="" /></a>
+									<article class="item"  onclick="open_dialog('aoa');">
+										<div class="image fit"><img src="images/pic11.jpg" alt="" /></div>
 										<header>
 											<h3>Attack On Algae<br><small >Museum exhibit to teach the public about the dangers of algae</small></h3>
 										</header>
@@ -209,8 +296,8 @@
 										
 								</div>
 								<div class="4u$ 12u$(mobile)">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic12.jpg" alt="" /></a>
+									<article class="item"  onclick="open_dialog('tse');">
+										<div class="image fit"><img src="images/pic12.jpg" alt="" /></div>
 										<header>
 											<h3>Twitch Sacrifices Everyone<br><small >Won 'Most Creative' Award at Global Game Jam HNL 2016</small></h3> <!--https://globalgamejam.org/2016/games/twitch-sacrifices-everyone-->
 										</header>
@@ -280,14 +367,14 @@
 
 			</div>
 
-		<!-- Scripts -->
+		<!-- Scripts 
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/jquery.scrollzer.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]
+			<script src="assets/js/main.js"></script>-->
 
 	</body>
 </html>
