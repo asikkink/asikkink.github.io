@@ -14,14 +14,15 @@
 		<link rel="stylesheet" href="assets/jquery-ui/jquery-ui.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<!--  <script src="assets/jquery-ui/external/jquery/jquery.js"></script>
-		    <script src="assets/jquery-ui/jquery-ui.js"></script> -->
-			  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		  <script src="assets/jquery-ui/external/jquery/jquery.js"></script>
+		    <script src="assets/jquery-ui/jquery-ui.js"></script> 
+			 <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>-->
 		<script>
 		 $(document).ready(function(){
 			$( "#dialog" ).dialog({
 			  autoOpen: false,
+			  width:"auto",
 			  show: {
 				effect: "fade",
 				duration: 500
@@ -47,47 +48,47 @@
 		switch(info){
 			case "renewal": 
 				$('#dialog').dialog('option', 'title', 'Renewal Application');
-				$("#dialog_info").html("<p>RENEWAL INFO!</p>");
+				$("#dialog_info").html("<div style='float:left;width:50%'><img src='images/pic10.jpg' style='box-shadow: 8px 8px 10px #aaa;' width='100%' height='100%'></div><div style='float:left;padding-left:30px;width:50%'><p style='text-align:left;font-size:12pt'>The Renewal Application was developed by my co-worker and I when we were employed at UH Manoa Student Housing. <br><br>The goal of this project was to increase the efficiency of the room renewal process through a new web interface. We focused on making the interface easy for staff to use to assign returning students to rooms and see what rooms were assigned, available, or reserved. <br><br> We began development in Spring 2015 and the project was put into use in Spring 2016. It cut down the renewal process from three days to one, allowing staff to assign ~2k students in just 8 hours. <br><br> I continued to add functionality and apply patches over the following two years. </p><p style='font-size:12pt;font-style: italic;'>Team members: Kara Knight<br>Tools used: PHP, MySQL, phpmyadmin, JavaScript, HTML, CSS, LAMP server</p></div>");
 				break;
 			case "galaxies": 
 				$('#dialog').dialog('option', 'title', 'Local Galaxies Visualization');
-				$("#dialog_info").html("<p>GALAXIES INFO!</p>");
+				$("#dialog_info").html("<div style='float:left;width:50%'><img src='images/pic05.jpg' style='box-shadow: 8px 8px 10px #aaa;' width='100%' height='100%'></div><div style='float:left;padding-left:30px;width:50%'><p style='text-align:left;font-size:12pt'>I developed the Galaxies Visualization while working as an undergraduate research assistant at the Laboratory for Advanced Visualization and Applications (LAVA) in Spring 2017. I consulted with Dr. Brent Tully at the Institute of Astronomy at UH, and together we designed an interface for visualizing his research team's latest local galaxy data. Using a JavaScript library called Three.js, I developed an interactive web interface to view the galaxy data in 3D. <br><br>Galaxy locations are plotted in 3D on a sphere based on their relative location in the sky, and given a color to denote the speed at which they are moving as observed from Earth. Users can select which galaxies to view by velocity, and adjust the coordinate system used to plot the data as desired. The 3D visualization then displays the data selected, and allows the user to move the 3D model to see from all angles.<br><br> Long term, the visualization will also allow users to click on individual galaxies in the model and see their name, image(s), and other useful information, along with Dr. Tully's data.</p><p style='font-size:12pt;font-style: italic;'>Tools used: JavaScript, HTML, CSS, Bootstrap, XAMPP server</p></div>");
 				break;
 			case "uh_courses": 
 				$('#dialog').dialog('option', 'title', 'UH Course Search');
-				$("#dialog_info").html("<p>UH COURSES INFO!</p>");
+				$("#dialog_info").html("<div style='float:left;width:700px'><iframe width='700' height='394' src='https://www.youtube.com/embed/W11CAolKwGY?rel=0&amp;showinfo=0' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe></div><div style='float:left;padding-left:30px;width:50%'><p style='text-align:left;font-size:12pt'>UH Course Search is a project I developed with a small team in my Data Storage and Retrieval class (ICS 321). Together we developed a web application to allow user to search through the UH Manoa course offerings with advanced filtering options, which would speed up the time it takes to find a course the user is interested in. It also combined information from ratemyprofessors.com, so professor ratings would be shown with the course information. <br><br>I wrote a script to scrape all the data from the UH course listing site (multiple pages for each course), and ratemyprofessors, and put all of the data in a database my team and I designed. We wrote a function to generate dynamic SQL queries to our database based on the filter options selected by the user.<br><br> We also developed a Java application with some of the SQL queries to compare database search times between the PHP and Java. The web interface was not well designed as our focus for the project was more on creating the dynamic database search functionality.</p><p style='font-size:12pt;font-style: italic;'>Team members: Kara Knight, Yiming Xie<br>Tools used: PHP, MySQL, phpmyadmin, JavaScript, HTML, CSS, Java, XAMPP server</p></div>");
 				break;
 				case "tma": 
 				$('#dialog').dialog('option', 'title', 'TMA Interface');
-				$("#dialog_info").html("<p>TMA INFO!</p>");
+				$("#dialog_info").html("<div style='float:left;width:50%'><img src='images/pic13.jpg' style='box-shadow: 8px 8px 10px #aaa;' width='100%' height='100%'></div><div style='float:left;padding-left:30px;width:50%'><p style='text-align:left;font-size:12pt'>While employed at UH Manoa Student Housing, I created a new user interface for the Mantenance Management system, which had been developed by TMA systems. <br><br>This new web interface allows residents to submit service requests and add more detail necessary for maintenance staff to do their work, minimizing the chance that staff would need to contact the student for more information. The app also searched the TMA database for open work orders already existing for the location, so students would know if a service request had already been submitted for their issue.<br><br> Additionally, maintenance staff were having difficulty using the interface built-in to the TMA system, as it was not straightforward to use or easy to find information. This web application simplified the process for them so it would be easy to view and find what they were looking for. The app integrated into the TMA system database to pull the data and display only what was necessary.<br><br> Using this integration functionality, I also wrote a script to email the staff a consolidated list of their open work orders at the beginning of each day in a printer-friendly form, so maintenance staff only had to print out that document instead of accessing the TMA system and printing out each work order pertaining to them. </p><p style='font-size:12pt;font-style: italic;'>Tools used: PHP, MS SQL, MySQL, phpmyadmin, JavaScript, HTML, CSS, LAMP server</p></div>");
 				break;
 			case "skysearch": 
 				$('#dialog').dialog('option', 'title', 'SkySearch');
-				$("#dialog_info").html("<p>SkySearch INFO!</p>");
+				$("#dialog_info").html("<div style='float:left;width:50%'><img src='images/pic01.jpg' style='box-shadow: 8px 8px 10px #aaa;' width='100%' height='100%'></div><div style='float:left;padding-left:30px;width:50%'><p style='text-align:left;font-size:12pt'>SkySearch was an application I developed for my Software Systems for Astronomy course I took at UH Hilo in Summer 2015. Using a large dataset of interesting astronomy targets (stars, galaxies, nebulas, etc), I created a web application to search for a target and view it's information, and calculated details for viewing the target for the night. Images of the target were displayed using the Aladin Lite plugin. I continued to develop this application with one of my classmates after completing the course.<br><br>In Fall 2015, I re-wrote this application in my Introduction to Programming for the Web course (ICS 415) with another classmate, using the Meteor framework and MongoDB for data storage. This iteration also allowed the user to create an account and save their favorite astronomy targets to view again at any time.</p><p style='font-size:12pt;font-style: italic;'>Team members: Alejandro Carvallo (1st iteration), Yiming Xie (2nd iteration)<br>Tools used: PHP, JavaScript, HTML, CSS, MySQL (1st iteration), XAMPP server (1st iteration), Meteor (2nd iteration), MongoDB (2nd iteration)</p></div>");
 				break;
 			case "kilohoku": 
 				$('#dialog').dialog('option', 'title', 'Kilo Hoku');
-				$("#dialog_info").html("<p>Kilo Hoku INFO!</p>");
+				$("#dialog_info").html("<div style='float:left;width:700px'><iframe width='700' height='394' src='https://www.youtube.com/embed/9SqqNXH2mMc?rel=0&amp;showinfo=0' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe></div><div style='float:left;margin-left:30px;width:700px'><p style='text-align:left;'>Kilo Hoku</p></div>");
 				break;
 			case "mauivr": 
 				$('#dialog').dialog('option', 'title', 'Maui Snares the Sun VR');
-				$("#dialog_info").html("<p>Maui VR INFO!</p>");
+				$("#dialog_info").html("<div style='float:left;width:50%'><img src='images/pic03.jpg' style='box-shadow: 8px 8px 10px #aaa;' width='100%' height='100%'></div><div style='float:left;margin-left:30px'><p style='text-align:left;'>Maui VR</p></div>");
 				break;
 			case "debug": 
 				$('#dialog').dialog('option', 'title', 'DebuggerPlusPlus');
-				$("#dialog_info").html("<p>DebuggerPlusPlus INFO!</p>");
+				$("#dialog_info").html("<<div style='float:left;width:50%'><img src='images/pic07.jpg' style='box-shadow: 8px 8px 10px #aaa;' width='100%' height='100%'></div><div style='float:left;margin-left:30px'><p style='text-align:left;'>DebuggerPlusPlus </p></div>");
 				break;
 			case "ufs": 
 				$('#dialog').dialog('option', 'title', 'Unidentified Flying Squirrel');
-				$("#dialog_info").html("<p>UFS INFO!</p>");
+				$("#dialog_info").html("<div style='float:left;width:700px'><iframe width='700' height='394' src='https://www.youtube.com/embed/jxCfv8KtzIQ?rel=0&amp;showinfo=0' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe></div><div style='float:left;margin-left:30px;width:700px'><p style='text-align:left;'>UFS</p></div>");
 				break;
 			case "aoa": 
 				$('#dialog').dialog('option', 'title', 'Attack On Algae');
-				$("#dialog_info").html("<p>Attack On Algae INFO!</p>");
+				$("#dialog_info").html("<div style='float:left;width:50%'><img src='images/pic11.jpg' style='box-shadow: 8px 8px 10px #aaa;' width='100%' height='100%'></div><div style='float:left;margin-left:30px'><p style='text-align:left;'>Attack On Algae</p></div>");
 				break;
 			case "tse": 
 				$('#dialog').dialog('option', 'title', 'Twitch Sacrifices Everyone');
-				$("#dialog_info").html("<p>Twitch Sacrifices Everyone INFO!</p>");
+				$("#dialog_info").html("<div style='float:left;width:50%'><img src='images/pic12.jpg' style='box-shadow: 8px 8px 10px #aaa;' width='120%' height='120%'></div><div style='float:left;margin-left:30px'><p style='text-align:left;'>Twitch Sacrifices Everyone </p></div>");
 				break;
 			default: break;
 		
@@ -178,7 +179,7 @@
 						<div class="container">
 
 							<header>
-								<h2>Portfolio</h2>
+								<h2 style='line-height:45px'>Portfolio <p style='font-size:25pt;margin-bottom:0px;'><small>Click an image for more information</small></p></h2>
 							</header>
 
 							<!--<p>Projects from my undergraduate work</p>-->
