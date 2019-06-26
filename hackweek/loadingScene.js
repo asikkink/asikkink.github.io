@@ -7,7 +7,7 @@ class loadingScene extends Phaser.Scene{
 	}
 	
 	create(){
-		this.add.test.(20,20, "loading game....", {font: "25px Arial", fill:"yellow"});
+		this.add.text(20,20, "loading game....", {font: "25px Arial", fill:"yellow"});
 	}
 	
 }
