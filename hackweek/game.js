@@ -6,7 +6,7 @@ window.onload = function(){
 		width: 1418,
 		height: 756,
 		backgroundColor: 0x000000,
-		scene: [titleScene, loadingScene, gameScene, gameOverScene]
+		scene: [titleScene, loadingScene, gameScene, gameOverScene],
 		physics:{
 			default: "arcade",
 			arcade:{
