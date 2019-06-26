@@ -1,7 +1,5 @@
 
-window.onload = function(){
-	
-	
+
 	var config = {
 		width: 1418,
 		height: 756,
@@ -10,4 +8,4 @@ window.onload = function(){
 	}
 	
 	var game = new Phaser.Game(config);
-}
+
