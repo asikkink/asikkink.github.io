@@ -15,7 +15,7 @@ class titleScene extends Phaser.Scene{
 		this.add.text(20, 20, "TESTING");
 		this.scene.start("loadGame");
 		
-		this.msgs = this.physics.add.group();
+		//this.msgs = this.physics.add.group();
 		
 	}
 	
