@@ -11,7 +11,7 @@ class loadingScene extends Phaser.Scene{
 		this.background = this.add.image(0,0,"background");
 		this.background.setOrigin(0,0);
 		
-		this.msg1 = this.add.image(config.width/2, config.height/2, "test-msg");
+		this.msg1 = this.add.image(800, 800, "test-msg");
 	}
 	
 }
