@@ -74,6 +74,10 @@
 				$('#dialog').dialog('option', 'title', 'Kilo Hoku');
 				$("#dialog_info").html("<div style='float:left;width:700px'><iframe width='700' height='394' src='https://www.youtube.com/embed/9SqqNXH2mMc?rel=0&amp;showinfo=0' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe><p style='margin-bottom:0px'>Project website: <a href='http://lava.hawaii.edu/kilohoku/'  target='blank'>lava.hawaii.edu/kilohoku/</a></p><p style='font-size:12pt;font-style: italic;'>Team members: Patrick Karjala, Dean Lodes, Kari Noe, Dr. Jason Leigh (Advisor)<br>Tools used: Unity3D engine, C#, Autodesk Maya, Adobe Photoshop, HTC Vive</p></div><div style='float:left;padding-left:30px;width:50%'><p style='text-align:left;font-size:12pt'><b>Kilo Hoku</b> is a Virtual Reality Wayfinding simulation, which allows users to experience navigating on a voyaging canoe using traditional Polynesian wayfinding techniques. A small team and I created this project for the HTC Vive VR headset in a graduate level special topics course on Virtual Reality (VR) development. My focus was on the stargazing aspect of wayfinding; I created the night sky and implemented a system so users could point the Vive controller at the sky to see the constellations. I also added an option to view the Hawaiian star lines, a system of star groupings across the sky. The sky rotates in real time, and can be sped up using the controllers as well. <br><br> My team members worked on making it possible to sail on the canoe, handling user interactivity and displaying user instructions. We created our own island models and added the Hawaiian star compass for users to learn and reference for navigating. We used existing water assets from the Unity asset store, and obtained the Hokulea model from Bishop Museum.<br><br>My team has continued development on this project over the last two years, demoing at the Malama Honua Summit in 2017, Honolulu Museum of Art, and Bishop Musem's Wayfinders Weekend. Our paper on this project has been published in <a href=' https://www.mitpressjournals.org/doi/abs/10.1162/pres_a_00301' target='blank'>PRESENCE: Teleoperators and Virtual Environments</a> in the MIT Press journals.</p></div>");
 				break;
+			case "challenger": 
+				$('#dialog').dialog('option', 'title', 'Moon Mission VR');
+				$("#dialog_info").html("<div style='float:left;width:700px'><iframe width='700' height='394' src='https://youtu.be/EPg3sjmwZI0?rel=0&amp;showinfo=0' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe><p style='font-size:12pt;font-style: italic;'>Team members: Jonathan Na, Aidai Almaz kyzy<br>Tools used: Unity3D engine, C#, Autodesk Maya, Adobe Photoshop, HTC Vive</p></div><div style='float:left;padding-left:30px;width:50%'><p style='text-align:left;font-size:12pt'><b>Moon Mission VR</b> is a Virtual Reality game where one player is in VR as an astronaut aboard a spaceship headed for the Moon, while a second player outside of VR plays as Mission Control, guiding the astronaut through the mission. The goal of the mission is to survive the journey to the Moon, and to build a probe successfully prior to reaching the Moon.<br><br>Our team was inspired by the <a href='https://www.challenger.org/'>Challenger Center</a> field trips we took in intermediate school, which were similar in that the class would split up into teams, and half of each team would conduct the mission on the spaceship, while the other half helped guide them from Mission Control. We decided that the Probe and Life Support roles would translate well into virtual reality since they are highly interactive in nature, so we implemented scenarios based on those roles in our application.<br><br> Long term, we would like to develop this game further, to be a multiplayer experience, support more mission roles, and work on other VR hardware, such as the Oculus Quest.</p></div>");
+				break;
 			case "mauivr": 
 				$('#dialog').dialog('option', 'title', 'Maui Snares the Sun VR');
 				$("#dialog_info").html("<div style='float:left;width:50%'><img src='images/pic03.jpg' style='box-shadow: 8px 8px 10px #aaa;' width='100%' height='100%'><p style='margin-bottom:0px'>Read the myth: <a href='http://www.sacred-texts.com/pac/maui/maui07.htm'>www.sacred-texts.com/pac/maui/maui07.htm</a></p><p style='font-size:12pt;font-style: italic;'>Team members: Andrew Guagliardo, Derek Chan, Dr. Jason Leigh (Advisor) <br>Tools used: Unity3D engine, C#, Autodesk Maya, HTC Vive</p></div><div style='float:left;padding-left:30px;width:50%'><p style='text-align:left;font-size:12pt'>In Fall 2016, a small team and I were awarded a grant through the Undergraduate Research Opportunity Program (UROP) to work on a Virtual Reality (VR) project. Our goal was to create an interactive immersive VR re-telling of a Polynesian myth, and study if VR was a more effecive way for students to learn and understand the myth.<br><br> We decided to use the story \"How Maui Snared the Sun\", as many of the elements in the story worked well for interactivity. Over the course of the semester, we prototyped many different ideas and developed the functionality we needed. To make it feel immersive, we made the characters react to the player's movements and actions. The story progresses as the player completes various actions in the virtual environment.<br><br> We presented our project at the Fall 2016 Undergraduate Showcase and achieved \"Honorable Mention\" in the Engineering & Computer Science category.</p></div>");
@@ -262,6 +266,16 @@
 								
 								</div>
 								<div class="4u 12u$(mobile)">
+									<article class="item"  onclick="open_dialog('challenger');">
+										<div class="image fit"><img src="images/pic15.jpg" alt="" /></div>
+										<header>
+											<h3>Moon Mission VR<br><small >A two player Virtual Reality game inspired by Challenger Center</small></h3>
+										</header>
+									</article>
+									
+								
+								</div>
+								<div class="4u 12u$(mobile)">
 									
 									<article class="item"  onclick="open_dialog('mauivr');">
 										<div class="image fit"><img src="images/pic03.jpg" alt="" /></div>
@@ -271,6 +285,10 @@
 									</article>
 									
 								</div>
+
+							</div>
+							<div class="row" style="padding-bottom:45px">
+
 								<div class="4u$ 12u$(mobile)">
 									
 								<article class="item"  onclick="open_dialog('debug');">
