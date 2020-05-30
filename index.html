@@ -11,6 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
 		<link rel="stylesheet" href="assets/jquery-ui/jquery-ui.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
@@ -166,18 +167,16 @@
 					<section id="aboutme" class="two">
 			
 
-						<header>
-								<h2>About Me</h2>
-							</header>
-								<div style="float:left; width:70%; padding: 10px 40px">
+						<div style="display:flex;flex-wrap:wrap-reverse;">
+							<div style="flex:1 1 auto; width:70%; padding: 10px 40px">
 								My name is Anna Sikkink, I graduated in Spring 2017 from the University of Hawaii at Mānoa with a BA in Information and Computer Science (IT focus), and a minor in Astronomy.<br><br>
 								I began taking graduate classes in Fall 2019, and my current goal is to complete an MS project which combines my Computer Science and Astronomy knowledge.<br><br>
 								I am currently employed at the University of Hawaii at Mānoa as an IT Specialist for Student Housing. My main focus is on web application development for internal usage.
-								</div>
-								<div 
-								style="float:left;width:30%; padding: 10px 40px">
-								<img src='images/avatar.jpg' width="70%" height="70%" >
-								</div>
+							</div>
+							<div style="flex:1 1 auto;min-width:300px;width:30%; padding: 10px 40px">
+								<img src="images/avatar.jpg" style="width:300px">
+							</div>
+						</div>
 							
 						
 					
@@ -192,14 +191,16 @@
 								<h2 style='line-height:45px'>Portfolio <p style='font-size:25pt;margin-bottom:0px;'><small>Click an image for more information</small></p></h2>
 							</header>
 
-							<!--<p>Projects from my undergraduate work</p>-->
-<h3 style="float:left;width:40%;text-align:left">Web Development Projects</h3><hr style="float:left;width:60%;border-color:#666;margin-top:30px;">
+							<div style="display:flex;flex-wrap:wrap;margin-bottom:30px">
+								<h3 style="flex: 1 1 auto;width:366px;text-align:left;"><i class="fas fa-globe"></i>&nbsp;&nbsp;Web Development Projects</h3>
+								<hr style="flex: 1 1 auto;width:55%;border-color:#666;margin-top:30px;">
+							</div>
 							<div class="row" style="padding-bottom:45px">
 								<div class="4u 12u$(mobile)">
 								<article class="item" onclick="open_dialog('shsite');">
 										<div class="image fit"><img src="images/pic14.jpg" alt="" /></div>
 										<header>
-											<h3>Student Housing Services Website<br><small >Complete website redesign, modernized and reorganized </small></h3>
+											<h3>Student Housing Services Website<br><small >Developed and restructured website to give it a modern redesign</small></h3>
 										</header>
 									</article>
 									
@@ -253,7 +254,10 @@
 		
 								</div>
 							</div>
-							<h3 style="float:left;width:35%;text-align:left">Virtual Reality Projects</h3><hr style="float:left;width:65%;border-color:#666;margin-top:30px;">
+							<div style="display:flex;flex-wrap:wrap;margin-bottom:30px">
+								<h3 style="flex: 1 1 auto;width:287px;text-align:left;"><i class="fas fa-vr-cardboard"></i>&nbsp;&nbsp;Virtual Reality Projects</h3>
+								<hr style="flex: 1 1 auto;width:55%;border-color:#666;margin-top:30px;">
+							</div>
 							<div class="row" style="padding-bottom:45px">
 								<div class="4u 12u$(mobile)">
 									<article class="item"  onclick="open_dialog('kilohoku');">
@@ -280,7 +284,7 @@
 									<article class="item"  onclick="open_dialog('mauivr');">
 										<div class="image fit"><img src="images/pic03.jpg" alt="" /></div>
 										<header>
-											<h3>Maui Snares The Sun VR<br><small >UROP project, experimented with interactive storytelling in VR</small></h3>
+											<h3>Maui Snares The Sun VR<br><small >UH UROP project, experimented with interactive storytelling in VR</small></h3>
 										</header>
 									</article>
 									
@@ -301,7 +305,10 @@
 								
 								</div>
 							</div>
-							<h3 style="float:left;width:45%;text-align:left">Game Development Projects</h3><hr style="float:left;width:55%;border-color:#666;margin-top:30px;">
+							<div style="display:flex;flex-wrap:wrap;margin-bottom:30px">
+								<h3 style="flex: 1 1 auto;width:383px;text-align:left;"><i class="fas fa-gamepad"></i>&nbsp;&nbsp;Game Development Projects</h3>
+								<hr style="flex: 1 1 auto;width:55%;border-color:#666;margin-top:30px;">
+							</div>
 							<div class="row">
 								<div class="4u 12u$(mobile)">
 									<article class="item"  onclick="open_dialog('ufs');">
@@ -354,16 +361,22 @@
 							</header>
 
 							<div style='padding-bottom:45px; width:100%;height:50%'>
-							<h3 style="float:left;width:20%;text-align:left;">Employment</h3><hr style="float:left;width:80%;border-color:#666;margin-top:30px;margin-bottom:40px">
-							<figure><a href="http://resnet.hawaii.edu"><img src="images/exp1.jpg" width="80%" height="80%" title="Image rights © UHM ResNet" /></a><figcaption>Employed at UHM Student Housing ResNet throughout the five years of my undergraduate studies, where I gained a lot of experience in computer networking and web application development.<br><br>Hired post-graduation as an IT Assistant, and was officially hired full time as an IT Specialist in Summer 2018.</figcaption></figure>
+							<div style="display:flex;flex-wrap:wrap;margin-bottom:30px">
+								<h3 style="flex: 1 1 auto;width:165px;text-align:left;"><i class="fas fa-briefcase"></i>&nbsp;&nbsp;Employment</h3>
+								<hr style="flex: 1 1 auto;width:55%;border-color:#666;margin-top:30px;">
+							</div>
+							<figure><a href="http://resnet.hawaii.edu"><img src="images/exp1.jpg" style='min-width: title="Image rights © UHM ResNet" /></a><figcaption>Employed at UHM Student Housing ResNet throughout the five years of my undergraduate studies, where I gained a lot of experience in computer networking and web application development.<br><br>Hired post-graduation as an IT Assistant, and was officially hired full time as an IT Specialist in Summer 2018.</figcaption></figure>
 							<figure><a href="http://lava.hawaii.edu"><img src="images/exp2.jpg" width="70%" height="70%" title="Image rights © LAVA" /></a>  <figcaption>In Spring 2017, I worked as an undergraduate research assistant at LAVA. Additionally, I worked on research projects with and took multiple classes from LAVA's director, Dr. Jason Leigh.</figcaption></figure>
 							<figure>	<a href="http://ifa.hawaii.edu"><img src="images/exp3.jpg" width="150%" height="150%" title="Image rights © UH IFA" /></a><figcaption style='margin-left:20%'>In Summer 2015, I was employed as a research assistant at the Institute for Astronomy (IFA), working on a project to determine Kepler objects observed in Robo-AO data using a Python program.</figcaption></figure>
 							<figure><a href="https://twitter.com/gaimoria"><img src="images/exp4.jpg" width="150%" height="150%" title="Image rights © Isaiah Sherman, EYUH Games LLC" /></a><figcaption style='margin-left:20%'>Throughout my last semester of my undergrad (spring 2017), I worked as a contract developer on the indie game Gaimoria. My focus was designing the state machine to control character actions and animations via player input. </figcaption></figure>
 						</div>
 						<div style='padding-bottom:45px'>
-							<h3 style="float:left;width:35%;text-align:left;margin-top:30px">Extracurricular Activities</h3><hr style="float:left;width:65%;border-color:#666;margin-top:60px;margin-bottom:40px">
+						iv style="display:flex;flex-wrap:wrap;margin-bottom:30px">
+								<h3 style="flex: 1 1 auto;width:309px;text-align:left;"><i class="fas fa-user-friends"></i>&nbsp;&nbsp;Extracurricular Activities</h3>
+								<hr style="flex: 1 1 auto;width:55%;border-color:#666;margin-top:30px;">
+							</div>
 							<figure><a href="http://acmanoa.github.io/"><img src="images/exp5.jpg" width="150%" height="150%" title="Image rights © ACM Manoa" /></a><figcaption style='margin-left:20%'>Joined ACM in Fall 2015, was elected on the ACM board as Treasurer in Spring 2016 and was re-elected for both Fall 2016 and Spring 2017. Helped organize events and fundraising for the organization.</figcaption></figure>
-							<figure><a href="https://github.com/uhmgreyhats/"><img src="images/exp6.jpg" width="90%" height="90%" title="Image rights © UHM Grey Hats" /></a><figcaption style='margin-left:30%'>Joined Grey Hats in Fall 2015 and remained active through Spring 2016. Participated in the Fall 2015 National Cyber League (NCL) Offensive Competition and Spring 2016 Collegiate Cyber Defense Competition (CCDC). </figcaption></figure>
+							<figure><a href="https://github.com/uhmgreyhats/"><img src="images/exp6.jpg" width="90%" height="90%" title="Image rights © UHM Grey Hats" /></a><figcaption style='margin-left:20%'>Joined Grey Hats in Fall 2015 and remained active through Spring 2016. Participated in the Fall 2015 National Cyber League (NCL) Offensive Competition and Spring 2016 Collegiate Cyber Defense Competition (CCDC). </figcaption></figure>
 						</div>
 							
 
