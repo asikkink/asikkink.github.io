@@ -61,7 +61,7 @@
 				break;
 			case "uh_courses": 
 				$('#dialog').dialog('option', 'title', 'UH Course Search');
-				$("#dialog_info").html("<div style='float:left;width:700px'><iframe width='700' height='394' src='https://www.youtube.com/embed/W11CAolKwGY?rel=0&amp;showinfo=0' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe><p style='font-size:12pt;font-style: italic;'>Team members: Kara Knight, Yiming Xie<br>Tools used: PHP, MySQL, phpmyadmin, JavaScript, HTML, CSS, Java, XAMPP server</p></div><div style='float:left;padding-left:30px;width:50%'><p style='text-align:left;font-size:12pt'><b>UH Course Search</b> is a project I developed with a small team in my Data Storage and Retrieval class (ICS 321). Together we developed a web application to allow user to search through the UH Manoa course offerings with advanced filtering options, which would speed up the time it takes to find a course the user is interested in. It also combined information from ratemyprofessors.com, so professor ratings would be shown with the course information. <br><br>I wrote a script to scrape all the data from the UH course listing site (multiple pages for each course), and ratemyprofessors, and put all of the data in a database my team and I designed. We wrote a function to generate dynamic SQL queries to our database based on the filter options selected by the user.<br><br> We also developed a Java application with some of the SQL queries to compare database search times between the PHP and Java. The web interface was not well designed as our focus for the project was more on creating the dynamic database search functionality.</p></div>");
+				$("#dialog_info").html("<div style='flex:1 1 auto;width:700px'><iframe width='700' height='394' src='https://www.youtube.com/embed/W11CAolKwGY?rel=0&amp;showinfo=0' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe><p style='font-size:12pt;font-style: italic;'>Team members: Kara Knight, Yiming Xie<br>Tools used: PHP, MySQL, phpmyadmin, JavaScript, HTML, CSS, Java, XAMPP server</p></div><div style='flex:1 1 auto;padding-left:30px;width:50%;min-width:600px;'><p style='text-align:left;font-size:12pt'><b>UH Course Search</b> is a project I developed with a small team in my Data Storage and Retrieval class (ICS 321). Together we developed a web application to allow user to search through the UH Manoa course offerings with advanced filtering options, which would speed up the time it takes to find a course the user is interested in. It also combined information from ratemyprofessors.com, so professor ratings would be shown with the course information. <br><br>I wrote a script to scrape all the data from the UH course listing site (multiple pages for each course), and ratemyprofessors, and put all of the data in a database my team and I designed. We wrote a function to generate dynamic SQL queries to our database based on the filter options selected by the user.<br><br> We also developed a Java application with some of the SQL queries to compare database search times between the PHP and Java. The web interface was not well designed as our focus for the project was more on creating the dynamic database search functionality.</p></div>");
 				break;
 				case "pilikia": 
 				$('#dialog').dialog('option', 'title', 'Pilikia Service Request System');
@@ -111,7 +111,7 @@
 	</head>
 	<body>
 	<div id="dialog" title="Dialog">
-  <div id="dialog_info"><p></p></div>
+  <div id="dialog_info" ><p></p></div>
 </div>
 
 		<!-- Header -->
