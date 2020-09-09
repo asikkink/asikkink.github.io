@@ -109,6 +109,33 @@
 		</script>
 		<style>
 		
+		.tooltip {
+		  position: relative;
+		  display: inline-block;
+		  border-bottom: 1px dotted black;
+		}
+
+		.tooltip .tooltiptext {
+		  visibility: hidden;
+		  width: 120px;
+		  background-color: black;
+		  color: #fff;
+		  text-align: center;
+		  border-radius: 6px;
+		  padding: 5px 0;
+		  
+		  /* Position the tooltip */
+		  position: absolute;
+		  z-index: 1;
+		  bottom: 100%;
+		  left: 50%;
+		  margin-left: -60px;
+		}
+
+		.tooltip:hover .tooltiptext {
+		  visibility: visible;
+		}
+		
 		.yt_video{
 				width: 100%;
 				min-height: 215px;
@@ -247,12 +274,12 @@
 
 					<!-- Social Icons -->
 						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/anna-sikkink-5274a9110/" target='blank' class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://www.linkedin.com/in/anna-sikkink/" target='blank' class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
 							<li><a href="https://github.com/asikkink" target='blank' class="icon fa-github"><span class="label">Github</span></a></li>
-							<li><a href="mailto:anaxias808@gmail.com" target='blank' class="icon fa-envelope"><span class="label">Email</span></a></li>
+							<li><a href="mailto:annasikkink@gmail.com" target='blank' class="icon fa-envelope"><span class="label">Email</span></a></li>
 							<li><a href="https://twitter.com/anaxias808" target='blank' class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 							<li><a href="https://www.instagram.com/anaxias808" target='blank' class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="https://soundcloud.com/anaxias" target='blank' class="icon fa-soundcloud"><span class="label">SoundCloud</span></a></li>
+							<!--<li><a href='' class="icon fa-discord tooltip"><span class="label">Discord</span><span class='tooltiptext'>Anaxias#4563</span></a></li>-->
 						</ul>
 
 				</div>
